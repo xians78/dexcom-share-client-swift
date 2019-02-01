@@ -17,8 +17,7 @@ extension ShareClientManager: CGMManagerUI {
 
     public func settingsViewController(for glucoseUnit: HKUnit) -> (UIViewController & CompletionNotifying) {
         let settings = ShareClientSettingsViewController(cgmManager: self, glucoseUnit: glucoseUnit, allowsDeletion: true)
-        let nav = SettingsNavigationViewController()
-        nav.pushViewController(settings, animated: false)
+        let nav = SettingsNavigationViewController(rootViewController: settings)
         return nav
     }
 
