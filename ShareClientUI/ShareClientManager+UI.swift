@@ -11,7 +11,7 @@ import ShareClient
 
 
 extension ShareClientManager: CGMManagerUI {
-    public static func setupViewController() -> (UIViewController & CGMManagerSetupViewController)? {
+    public static func setupViewController() -> (UIViewController & CGMManagerSetupViewController & CompletionNotifying)? {
         return ShareClientSetupViewController()
     }
 
