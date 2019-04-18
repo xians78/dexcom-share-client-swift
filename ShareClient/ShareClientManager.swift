@@ -54,7 +54,7 @@ public class ShareClientManager: CGMManager {
         }
     }
 
-    public let delegate = CGMManagerDelegateWrapper()
+    public let delegate = WeakSynchronizedDelegate<CGMManagerDelegate>()
 
     public let providesBLEHeartbeat = false
 
